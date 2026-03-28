@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" href="auth.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+  <div class="container">
+    <h2>Login</h2> <input type="email" id="li-email" placeholder="Email">
+    <div class="password-box"> <input type="password" id="li-password" placeholder="Password">
+      <span class="toggle-eye" onclick="togglePassword('li-password', this)">👁</span>
+    </div>
+    <button onclick="login()">Login</button>
+    <p>New user? <a href="signup.html">Sign Up</a></p>
+  </div>
+  <script src="auth.js"></script>
+</body>
+
+</html>

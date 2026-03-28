@@ -1,0 +1,303 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+
+/* =========================
+   PAGE BACKGROUND
+========================= */
+
+body {
+
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url("https://images.unsplash.com/photo-1512436991641-6745cdb1723f");
+
+  background-size: cover;
+  background-position: center;
+
+}
+
+
+/* =========================
+   LOGIN CONTAINER
+========================= */
+
+.container {
+
+  width: 420px;
+  padding: 40px;
+
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.15);
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  box-shadow: 0 10px 45px rgba(0, 0, 0, 0.45);
+
+  text-align: center;
+
+  animation: slideUp 0.9s ease;
+
+  transition: 0.4s;
+
+}
+
+
+/* hover lift */
+
+.container:hover {
+
+  transform: translateY(-6px);
+
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.55);
+
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+.container h2 {
+
+  color: #fff;
+  font-size: 30px;
+
+  margin-bottom: 25px;
+
+  letter-spacing: 1px;
+
+}
+
+
+/* =========================
+   INPUT FIELDS
+========================= */
+
+input {
+
+  width: 100%;
+
+  padding: 14px;
+
+  margin: 12px 0;
+
+  border-radius: 10px;
+
+  border: none;
+  outline: none;
+
+  font-size: 15px;
+
+  background: rgba(255, 255, 255, 0.9);
+
+  transition: 0.3s;
+
+}
+
+
+/* input focus effect */
+
+input:focus {
+
+  transform: scale(1.03);
+
+  box-shadow: 0 0 10px #4CAF50;
+
+}
+
+
+/* =========================
+   PASSWORD BOX
+========================= */
+
+.password-box {
+
+  position: relative;
+
+}
+
+
+/* eye icon */
+
+.toggle-eye {
+
+  position: absolute;
+
+  right: 12px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  cursor: pointer;
+
+  font-size: 18px;
+
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+button {
+
+  width: 100%;
+
+  padding: 14px;
+
+  margin-top: 12px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: linear-gradient(135deg, #43cea2, #185a9d);
+
+  color: white;
+
+  font-size: 17px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.35s;
+
+  position: relative;
+  overflow: hidden;
+
+}
+
+
+/* button hover */
+
+button:hover {
+
+  transform: translateY(-2px);
+
+  background: linear-gradient(135deg, #185a9d, #43cea2);
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+
+}
+
+
+/* shine animation */
+
+button::before {
+
+  content: "";
+
+  position: absolute;
+
+  width: 300%;
+  height: 300%;
+
+  background: rgba(255, 255, 255, 0.25);
+
+  top: -120%;
+  left: -120%;
+
+  transform: rotate(45deg);
+
+  transition: 0.7s;
+
+}
+
+button:hover::before {
+
+  top: 120%;
+  left: 120%;
+
+}
+
+
+/* =========================
+   TEXT
+========================= */
+
+.container p {
+
+  margin-top: 18px;
+
+  font-size: 14px;
+
+  color: #f1f1f1;
+
+}
+
+
+/* signup link */
+
+.container a {
+
+  color: #00ffd5;
+
+  text-decoration: none;
+
+  font-weight: 600;
+
+}
+
+.container a:hover {
+
+  text-decoration: underline;
+
+}
+
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes slideUp {
+
+  from {
+
+    opacity: 0;
+    transform: translateY(60px);
+
+  }
+
+  to {
+
+    opacity: 1;
+    transform: translateY(0);
+
+  }
+
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:500px) {
+
+  .container {
+
+    width: 90%;
+
+    padding: 35px;
+
+  }
+
+}

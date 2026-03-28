@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Membership Plans</title>
+  <link rel="stylesheet" href="membership.css" />
+</head>
+<body>
+
+<section class="membership">
+  <div class="top-content">
+    <h1>Choose Your Membership</h1>
+    <p class="subtitle">Unlock exclusive discounts, premium support, and faster delivery</p>
+  </div>
+
+  <div class="plans">
+
+    <!-- Basic -->
+    <div class="plan" data-plan="Basic">
+      <div class="plan-header">
+        <h2>Basic</h2>
+        <p class="price">₹199 <span>/ month</span></p>
+      </div>
+      <ul>
+        <li>✔ Free Delivery</li>
+        <li>✔ 5% Discount</li>
+        <li>✔ Standard Support</li>
+      </ul>
+      <button onclick="togglePayment('Basic',199,'1 Month','Free Delivery + 5% Discount + Standard Support', this)">
+        Join Now
+      </button>
+    </div>
+
+    <!-- Premium -->
+    <div class="plan popular" data-plan="Premium">
+      <span class="badge">Most Popular</span>
+      <div class="plan-header">
+        <h2>Premium</h2>
+        <p class="price">₹499 <span>/ 3 months</span></p>
+      </div>
+      <ul>
+        <li>✔ Free Delivery</li>
+        <li>✔ 15% Discount</li>
+        <li>✔ Priority Support</li>
+        <li>✔ Early Access Offers</li>
+      </ul>
+      <button onclick="togglePayment('Premium',499,'3 Months','Free Delivery + 15% Discount + Priority Support + Early Access Offers', this)">
+        Join Now
+      </button>
+    </div>
+
+    <!-- VIP -->
+    <div class="plan" data-plan="VIP">
+      <div class="plan-header">
+        <h2>VIP</h2>
+        <p class="price">₹999 <span>/ year</span></p>
+      </div>
+      <ul>
+        <li>✔ 30% Discount</li>
+        <li>✔ Exclusive Products</li>
+        <li>✔ 24/7 Support</li>
+        <li>✔ Free Priority Delivery</li>
+      </ul>
+      <button onclick="togglePayment('VIP',999,'1 Year','30% Discount + Exclusive Products + 24/7 Support + Free Priority Delivery', this)">
+        Join Now
+      </button>
+    </div>
+
+  </div>
+
+  <!-- PAYMENT TOGGLE SECTION -->
+  <div id="paymentSection" class="payment-section hidden">
+    <h2>Complete Your Membership</h2>
+    <p id="selectedPlanText"></p>
+
+    <div class="payment-methods">
+      <label>
+        <input type="radio" name="paymentMethod" value="UPI" checked />
+        UPI
+      </label>
+
+      <label>
+        <input type="radio" name="paymentMethod" value="Card" />
+        Debit / Credit Card
+      </label>
+    </div>
+
+    <button id="payBtn" class="pay-btn" onclick="payMembership()">Pay Now</button>
+  </div>
+</section>
+
+<!-- Toast Notification -->
+<div id="toast" class="toast"></div>
+
+<script src="membership.js"></script>
+</body>
+</html>

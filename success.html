@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Order Success</title>
+  <link rel="stylesheet" href="success.css" />
+</head>
+<body>
+
+  <div class="success-container">
+    <div class="success-card">
+      <div class="checkmark">✓</div>
+      <h1>Order Placed Successfully!</h1>
+      <p class="subtext">Thank you for shopping with us 🎉</p>
+
+      <!-- Customer Info -->
+      <div class="info-box">
+        <h2>Customer Details</h2>
+        <p><strong>Name:</strong> <span id="customerName"></span></p>
+        <p><strong>Email:</strong> <span id="customerEmail"></span></p>
+        <p><strong>Phone:</strong> <span id="customerPhone"></span></p>
+        <p><strong>Address:</strong> <span id="customerAddress"></span></p>
+        <p><strong>Payment Method:</strong> <span id="paymentMethod"></span></p>
+      </div>
+
+      <!-- Order Summary -->
+      <div class="info-box">
+        <h2>Order Summary</h2>
+        <div id="orderedItems"></div>
+
+        <div class="bill-line">
+          <span>Subtotal</span>
+          <span>₹<span id="subtotal"></span></span>
+        </div>
+
+        <div class="bill-line">
+          <span>Shipping</span>
+          <span>₹<span id="shipping"></span></span>
+        </div>
+
+        <div class="bill-total">
+          <span>Total Paid</span>
+          <span>₹<span id="total"></span></span>
+        </div>
+      </div>
+
+      <!-- Buttons -->
+      <div class="btn-group">
+        <a href="home.html" class="btn home-btn">Go to Home</a>
+        <a href="Shop.html" class="btn shop-btn">Shop Again</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="success.js"></script>
+</body>
+</html>

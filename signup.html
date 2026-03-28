@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+
+<div class="container">
+  <h2>Sign Up</h2>
+
+  <input type="text" id="su-name" placeholder="Name">
+  <input type="email" id="su-email" placeholder="Email">
+
+  <div class="password-box">
+    <input type="password" id="su-password" placeholder="Password">
+    <span class="toggle-eye" onclick="togglePassword('su-password', this)">👁</span>
+  </div>
+
+<button onclick="signup()">Sign Up</button>
+
+  <p>Already have an account? <a href="login.html">Login</a></p>
+</div>
+
+<!-- SweetAlert -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<!-- Auth Logic -->
+<script src="auth.js"></script>
+
+</body>
+</html>

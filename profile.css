@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #f3f4f6, #e0e7ff);
+  min-height: 100vh;
+  padding: 30px;
+}
+
+.payment-page {
+  display: flex;
+  justify-content: center;
+}
+
+.payment-box {
+  background: white;
+  padding: 35px;
+  border-radius: 22px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.08);
+  width: 100%;
+  max-width: 800px;
+}
+
+.payment-box h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #111827;
+}
+
+.order-summary,
+.plan-summary,
+.final-summary,
+.payment-methods {
+  background: #f9fafb;
+  padding: 20px;
+  border-radius: 16px;
+  margin-bottom: 25px;
+}
+
+.order-summary h2,
+.plan-summary h2,
+.final-summary h2,
+.payment-methods h2 {
+  margin-bottom: 15px;
+  color: #1f2937;
+}
+
+.cart-item {
+  padding: 12px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.cart-item p {
+  margin: 5px 0;
+  color: #374151;
+}
+
+.total-line {
+  margin-top: 15px;
+  font-size: 1.1rem;
+  color: #111827;
+}
+
+.payment-methods label {
+  display: block;
+  padding: 12px 15px;
+  margin: 10px 0;
+  background: white;
+  border-radius: 12px;
+  cursor: pointer;
+  border: 1px solid #ddd;
+}
+
+.payment-methods label:hover {
+  border-color: #4f46e5;
+  background: #eef2ff;
+}
+
+.payment-methods input {
+  margin-right: 10px;
+}
+
+#payBtn {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 14px;
+  background: #16a34a;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#payBtn:hover {
+  background: #15803d;
+}
+
+.toast {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #111827;
+  color: white;
+  padding: 14px 22px;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.4s ease;
+  z-index: 999;
+}
+
+.toast.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}

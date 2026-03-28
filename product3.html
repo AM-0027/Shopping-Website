@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOPPING WEBSITE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="shop/png" href="shop.png">
+</head>
+
+<body>
+    <section id="header">
+        <a href="#"><img src="g&g logo.png" class="logo" alt=""></a>
+        <div>
+            <ul id="navbar">
+                <li><a  href="home.html">HOME</a></li>
+                <li><a class="active" href="Shop.html">SHOP</a></li>
+                <li><a href="blog.html">BLOG</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li id="g-bag">
+  <a class="active cart-link" href="cart.html">
+    <span class="material-symbols-outlined">shopping_cart</span>
+    <span id="cartCount" class="cart-count">0</span>
+  </a>
+</li>
+                <!-- <a href="#" id="close"><i class="fa fa-times"></i></a>             -->
+                </ul>
+        </div>
+        <!-- <div id="mobile">
+            <a href="cart.html"><span class="material-symbols-outlined">shopping_cart</span></a>
+            <i id = "bar" class="fa fa-outdent"></i>
+        </div> -->
+    </section>
+
+<section id="details">
+        <div class="img1">
+          <img src="ad4.png" width="100%" id="MainImg" alt="">
+           
+         <div class="img-group">
+        <div class="img-col">
+            <img src="ad4.png" width="100%" class="small_img" alt="">
+        </div>
+        <div class="img-col">
+            <img src="t4.jpg" width="100%" class="small_img" alt="">
+        </div>
+        <div class="img-col">
+            <img src="t5.jpg" width="100%" class="small_img" alt="">
+        </div>
+        <div class="img-col">
+            <img src="t6.jpg" width="100%" class="small_img" alt="">
+        </div>
+            </div>
+        </div>
+
+        <div class="single-pro">
+            <h6>U.S. Polo Assn.</h6>
+            <h4>Men's Striped Round Neck T-Shirt</h4>           
+             <h2 id="priceDisplay">₹000</h2>
+            <select id="sizeSelect"> 
+                <option>Select Size</option>
+                <option>XL</option>
+                <option>XXL</option>
+                <option>Small</option>                
+                <option>Medium</option>
+                <option>Large</option>
+            </select>
+            <input type="number" id="quantityInput" value="1" min="1">
+            <button onclick="addToCart()">Add To Cart</button>
+            <h4>Product Details</h4>
+            <span>Check out our latest collection of men's short-sleeve T-shirts. 
+                Whether you’re in need of some new plain T-shirts for everyday wear, some quirky 
+                graphic tees or smart-casual polo shirts, we have you covered. You’ll find a
+                 selection of basic T-shirt multipacks to fill up your drawers – choose from stylish
+                  V-neck options or classic crew necks. Our slim and regular fits effortlessly dress
+                   things up or down. Browse our vests for more casual summer styles.</span>
+        </div>
+    </section>
+
+     <script>
+
+// ✅ Correct image-wise base price
+const imagePrice = {
+  "ad4.png": 1000,
+  "t4.jpg": 2000,
+  "t5.jpg": 3000,
+  "t6.jpg": 4000
+};
+
+// ✅ Size price
+const sizePrice = {
+  Small: 2,
+  Medium: 5,
+  Large: 10,
+  XL: 15,
+  XXL: 20
+};
+
+const mainImg = document.getElementById("MainImg");
+const smallImgs = document.querySelectorAll(".small_img");
+const priceDisplay = document.getElementById("priceDisplay");
+
+// ✅ Change image + price
+smallImgs.forEach(img => {
+  img.addEventListener("click", function () {
+    mainImg.src = this.src;
+
+    const fileName = this.src.split("/").pop();
+    const price = imagePrice[fileName] || 80;
+
+    priceDisplay.innerText = "₹" + price;
+  });
+});
+
+// ✅ Add to cart (FIXED)
+function addToCart() {
+  const size = document.getElementById("sizeSelect").value;
+  const qty = parseInt(document.getElementById("quantityInput").value);
+
+  if (size === "Select Size") {
+    alert("Please select size");
+    return;
+  }
+
+  const fileName = mainImg.src.split("/").pop();
+  const basePrice = imagePrice[fileName] || 80;
+
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  const product = {
+    id: fileName + "-" + size,   // ✅ unique ID
+    name: "Men's Fashion Wear (" + fileName + ")", // ✅ dynamic name
+    size: size,
+    qty: qty,
+    price: basePrice + sizePrice[size],
+    image: mainImg.src          // ✅ FULL IMAGE PATH (IMPORTANT)
+  };
+
+  const existing = cart.find(item => item.id === product.id);
+
+  if (existing) {
+    existing.qty += qty;
+  } else {
+    cart.push(product);
+  }
+
+  localStorage.setItem("cart", JSON.stringify(cart));
+
+  alert("Added to cart successfully!");
+}
+
+// cart
+function updateCartCount() {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  let totalItems = 0;
+
+  cart.forEach(item => {
+    totalItems += item.qty;
+  });
+
+  const cartCount = document.getElementById("cartCount");
+  if (cartCount) {
+    cartCount.textContent = totalItems;
+    cartCount.style.display = totalItems > 0 ? "flex" : "none";
+  }
+}
+
+updateCartCount();
+        </script>
+
+    </body>
+    </html>

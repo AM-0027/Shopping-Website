@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOPPING WEBSITE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="shop/png" href="shop.png">
+</head>
+
+<body>
+    <section id="header">
+        <a href="#"><img src="g&g logo.png" class="logo" alt=""></a>
+        <div>
+            <ul id="navbar">
+                <li><a  href="home.html">HOME</a></li>
+                <li><a  href="Shop.html">SHOP</a></li>
+                <li><a class="active" href="blog.html">BLOG</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="membership.html">CONTACT</a></li>
+                <li id="g-bag">
+  <a class="active cart-link" href="cart.html">
+    <span class="material-symbols-outlined">shopping_cart</span>
+    <span id="cartCount" class="cart-count">0</span>
+  </a>
+</li>
+                 <div class="admin-wrapper" id="adminWrapper">
+
+                    <!-- USER PROFILE -->
+                    <li class="admin-wrapper">
+
+                        <span id="adminName" class="admin-name">Loading...</span>
+
+                        <span class="material-symbols-outlined admin-arrow" id="dropdownArrow">
+                            arrow_drop_down
+                        </span>
+
+                        <input type="file" id="profileInput" accept="image/*" hidden>
+
+                        <div class="profile-dropdown" id="profileDropdown">
+
+                            <div class="dropdown-item profile-name" id="dropdownName">
+                                <span class="material-symbols-outlined user-icon">person</span>
+                                <span id="dropdownUser">Admin</span>
+                            </div>
+
+                            <div class="dropdown-item toggle-mode">
+                                <span class="material-symbols-outlined menu-icon">
+                                    dark_mode
+                                </span>
+                                Dark Mode
+                                <input type="checkbox" id="darkModeToggle">
+                            </div>
+
+                            <button class="dropdown-item logout-btn" id="logoutBtn">
+                                <span class="material-symbols-outlined menu-icon">
+                                    logout
+                                </span>
+                                Logout
+                            </button>
+                        </div>
+                        <!-- Profile Image -->
+                        <img src="images/admin.png" id="adminLogo" class="admin-logo" alt="Admin" />
+                </div>
+        </header>
+
+                </ul>
+        </div>
+        <!-- <div id="mobile">
+            <a href="cart.html"><span class="material-symbols-outlined">shopping_cart</span></a>
+            <i id = "bar" class="fa fa-outdent"></i>
+        </div> -->
+    </section>
+
+    <section id="page" class="blog-header">
+        <h2>#READMORE</h2>
+
+       <p>Read all case studies about our products! </p>
+    </section>
+
+    <section id="blog">
+      <div class="blog-box">
+        <div class="blog-img">
+            <img src="bg4.jpg" alt="">
+        </div>
+        <div class="blog-details">
+            <h4>Cotton Fabric</h4>
+            <p>Kickstarter man braid godard colouring book. 
+                Raclette waistcoat selfie chartreuse hexagon 
+                irony, godard.</p>
+                <a href="about.html">CONTINUE READING</a>
+           </div>
+        <h1>12/01</h1>
+      </div>
+      <div class="blog-box">
+        <div class="blog-img">
+            <img src="bg5.jpg" alt="">
+        </div>
+        <div class="blog-details">
+            <h4>Cotton Dress</h4>
+            <p>A cotton top collection, you'll find amazing designs and craftsmanship.
+                 Choose from beautiful prints, patterns, and various sleeve styles.</p>
+                <a href="about.html">CONTINUE READING</a>
+        </div>
+        <h1>12/02</h1>
+      </div>
+      <div class="blog-box">
+        <div class="blog-img">
+            <img src="bg3.jpg" alt="">
+        </div>
+        <div class="blog-details">
+            <h4>Denim Shirt Men's</h4>
+            <p>Denim shirts for men are known for stylish look and longevity for casual
+                and semi-casual and faded designs.</p>
+                <a href="about.html">CONTINUE READING</a>
+        </div>
+        <h1>12/03</h1>
+      </div>
+      <div class="blog-box">
+        <div class="blog-img">
+            <img src="bg2.jpg" alt="">
+        </div>
+        <div class="blog-details">
+            <h4>Pant Top's</h4>
+            <p>If you're looking for stylish pant-top sets for women, 
+                here are some trendy .</p>
+                <a href="about.html">CONTINUE READING</a>
+        </div>
+        <h1>12/04</h1>
+      </div>
+      <div class="blog-box">
+        <div class="blog-img">
+            <img src="bg1.jpg" alt="">
+        </div>
+        <div class="blog-details">
+            <h4>Cool Dreses</h4>
+            <p>White dresses are timeless and versatile. Whether you’re attending a 
+                special occasion, going to the beach, or simply want a chic everyday look, there’s 
+                a white dress for every style.</p>
+                <a href="about.html">CONTINUE READING</a>
+        </div>
+        <h1>12/05</h1>
+      </div>
+      
+      <div class="blog-box">
+        <div class="blog-img">
+            <img src="r1.jpg" alt="">
+        </div>
+        <div class="blog-details">
+            <h4>Summer Wear</h4>
+            <p> Cotton clothes and light coloured clothes in summers. Cotton is a good absorber 
+            of water,it also absorb sweat from our body and exposes the sweat to 
+            the atmosphere.</p>
+                <a href="about.html">CONTINUE READING</a>
+        </div>
+        <h1>13/01</h1>
+      </div><div class="blog-box">
+        <div class="blog-img">
+            <img src="r2.jpg" alt="">
+        </div>
+        <div class="blog-details">
+            <h4>Versity: Letter Jacket </h4>
+            <p>A Letter jacket especially styled for high school and college student,
+                for good durability and quality, these jackets made of high quality
+                materials.</p>
+                <a href="about.html">CONTINUE READING</a>
+        </div>
+        <h1>13/02</h1>
+      </div><div class="blog-box">
+        <div class="blog-img">
+            <img src="r3.jpg" alt="">
+        </div>
+        <div class="blog-details">
+            <h4>Formal Look</h4>
+            <p>Smart clothes are might be worn at work or business dress and also
+                being an iconic look.</p>
+                <a href="about.html">CONTINUE READING</a>
+        </div>
+        <h1>13/03</h1>
+      </div><div class="blog-box">
+        <div class="blog-img">
+            <img src="r4.jpg" alt="">
+        </div>
+        <div class="blog-details">
+            <h4>Regular Fit</h4>
+            <p> Denim jacket should fit slightly fitted, but not too tight,
+                look attrative and comfortable.</p>
+                <a href="about.html">CONTINUE READING</a>
+        </div>
+        <h1>13/04</h1>
+      </div>
+      <div class="blog-box">
+        <div class="blog-img">
+            <img src="r5.jpg" alt="">
+        </div>
+        <div class="blog-details">
+            <h4>Shirts</h4>
+            <p>you can wear a plain tee underneath, or even add an open 
+                cardigan if you like it, if you want to wear a suit with the 
+                unbuttoned look this is absolutely fine .</p>
+                <a href="about.html">CONTINUE READING</a>
+        </div>
+        <h1>13/05</h1>
+      </div>
+    </section>
+
+    <section id="number">
+        <a href="shop.html">1</a>
+        <a href="blog.html">2</a>
+        <a href="about.html"><i class="fa fa-forward" aria-hidden="true"></i></a>
+    </section>
+
+    <section id="newsletter">
+        <div class="newstext">
+            <h4>Sign Up For New Collection</h4>
+            <p>Get E-Mail Updates About Our Latest Shop And <span>Special Offers.</span></p>
+        </div>
+        <div class="form">
+        <input type="text" placeholder="Enter your e-mail" required>
+        <button class="normal">Sign Up</button>
+        </div>
+    </section>
+    
+    <script>
+        // cart
+function updateCartCount() {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  let totalItems = 0;
+
+  cart.forEach(item => {
+    totalItems += item.qty;
+  });
+
+  const cartCount = document.getElementById("cartCount");
+  if (cartCount) {
+    cartCount.textContent = totalItems;
+    cartCount.style.display = totalItems > 0 ? "flex" : "none";
+  }
+}
+
+updateCartCount();
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>

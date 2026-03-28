@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOPPING WEBSITE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="shop/png" href="shop.png">
+</head>
+
+<body onload="checkAuth()">
+    <section id="header">
+        <a href="#"><img src="g&g logo.png" class="logo" alt=""></a>
+        <div class="active">
+            <ul id="navbar">
+                <li><a class="active" href="home.html">HOME</a></li>
+                <li><a href="shop.html">SHOP</a></li>
+                <li><a href="blog.html">BLOG</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="membership.html">CONTACT</a></li>
+                <li id="g-bag">
+  <a class="active cart-link" href="cart.html">
+    <span class="material-symbols-outlined">shopping_cart</span>
+    <span id="cartCount" class="cart-count">0</span>
+  </a>
+</li>
+                <div class="admin-wrapper" id="adminWrapper">
+
+                    <!-- USER PROFILE -->
+                    <li class="admin-wrapper">
+
+                        <span id="adminName" class="admin-name">Loading...</span>
+
+                        <span class="material-symbols-outlined admin-arrow" id="dropdownArrow">
+                            arrow_drop_down
+                        </span>
+
+                        <input type="file" id="profileInput" accept="image/*" hidden>
+
+                        <div class="profile-dropdown" id="profileDropdown">
+
+                            <div class="dropdown-item profile-name" id="dropdownName">
+                                <span class="material-symbols-outlined user-icon">person</span>
+                                <span id="dropdownUser">Admin</span>
+                            </div>
+
+                            <div class="dropdown-item toggle-mode">
+                                <span class="material-symbols-outlined menu-icon">
+                                    dark_mode
+                                </span>
+                                Dark Mode
+                                <input type="checkbox" id="darkModeToggle">
+                            </div>
+
+                            <button class="dropdown-item logout-btn" id="logoutBtn">
+                                <span class="material-symbols-outlined menu-icon">
+                                    logout
+                                </span>
+                                Logout
+                            </button>
+                        </div>
+                        <!-- Profile Image -->
+                        <img src="images/admin.png" id="adminLogo" class="admin-logo" alt="Admin" />
+                </div>
+                </header>
+            </ul>
+            </header>
+        </div>
+        <!-- <div id="mobile">
+            <a href="cart.html"><span class="material-symbols-outlined">shopping_cart</span></a>
+            <i id = "bar" class="fa fa-outdent"></i>
+        </div> -->
+    </section>
+
+    <section id="article">
+        <h3>Online Shopping</h3>
+        <h2>SPECIAL OFFER</h2>
+        <h1>50% OFF</h1>
+        <h4>On All Products</h4>
+        <button><a href="shop.html">BUY NOW</button></a>
+    </section>
+
+    <section id="feature" class="section-p1">
+        <div class="fe-box">
+            <img src="p1.png" alt="">
+            <h6>Free Shipping</h6>
+        </div>
+        <div class="fe-box">
+            <img src="p2.png" alt="">
+            <h6>Online Order</h6>
+        </div>
+        <div class="fe-box">
+            <img src="p3.png" alt="">
+            <h6>Save Money</h6>
+        </div>
+        <div class="fe-box">
+            <img src="p4.png" alt="">
+            <h6>Promotions</h6>
+        </div>
+        <div class="fe-box">
+            <img src="p5.png" alt="">
+            <h6>Happy Sell</h6>
+        </div>
+        <div class="fe-box">
+            <img src="p6.png" alt="">
+            <h6>24/7 Support</h6>
+        </div>
+    </section>
+
+    <section id="product1" class="section-p1">
+    <h2>Featured Products</h2>
+    <p>Fresh Styles for Everyday Fashion</p>
+
+    <div class="container">
+        <div class="pro">
+            <img src="ad1.png" alt="Urban Cotton T-Shirt">
+            <div class="des">
+                <span>Roadster</span>
+                <h3>Men's Cotton Graphic T-Shirt</h3>
+                <div class="star">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star-half checked"></span>
+                </div>
+                <h4>₹799</h4>
+            </div>
+            <a href="#"><i class="material-symbols-outlined cart">shopping_cart</i></a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="pro">
+            <img src="ad2.png" alt="Formal Shirt">
+            <div class="des">
+                <span>Louis Philippe</span>
+                <h3>Men's Slim Fit Formal Shirt</h3>
+                <div class="star">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star-half checked"></span>
+                </div>
+                <h4>₹1,299</h4>
+            </div>
+            <a href="#"><i class="material-symbols-outlined cart">shopping_cart</i></a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="pro">
+            <img src="ad3.png" alt="Black Printed T-Shirt">
+            <div class="des">
+                <span>Bewakoof</span>
+                <h3>Men's Black Printed Casual Tee</h3>
+                <div class="star">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star-half checked"></span>
+                </div>
+                <h4>₹699</h4>
+            </div>
+            <a href="#"><i class="material-symbols-outlined cart">shopping_cart</i></a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="pro">
+            <img src="ad4.png" alt="Striped T-Shirt">
+            <div class="des">
+                <span>U.S. Polo Assn.</span>
+                <h3>Men's Striped Round Neck T-Shirt</h3>
+                <div class="star">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star-half checked"></span>
+                </div>
+                <h4>₹899</h4>
+            </div>
+            <a href="#"><i class="material-symbols-outlined cart">shopping_cart</i></a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="pro">
+            <img src="ad5.png" alt="Checked Shirt">
+            <div class="des">
+                <span>Highlander</span>
+                <h3>Men's Checked Casual Shirt</h3>
+                <div class="star">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star-half checked"></span>
+                </div>
+                <h4>₹1,099</h4>
+            </div>
+            <a href="#"><i class="material-symbols-outlined cart">shopping_cart</i></a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="pro">
+            <img src="ad6.png" alt="Casual Wear T-Shirt">
+            <div class="des">
+                <span>HRX</span>
+                <h3>Men's Everyday Casual Wear T-Shirt</h3>
+                <div class="star">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star-half checked"></span>
+                </div>
+                <h4>₹849</h4>
+            </div>
+            <a href="#"><i class="material-symbols-outlined cart">shopping_cart</i></a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="pro">
+            <img src="ad7.jpg" alt="Bell Bottom Pant">
+            <div class="des">
+                <span>Levi's</span>
+                <h3>Women's High Waist Bell Bottom Jeans</h3>
+                <div class="star">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star-half checked"></span>
+                </div>
+                <h4>₹1,499</h4>
+            </div>
+            <a href="#"><i class="material-symbols-outlined cart">shopping_cart</i></a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="pro">
+            <img src="ad8.png" alt="Formal Wear">
+            <div class="des">
+                <span>Van Heusen</span>
+                <h3>Men's Premium Formal Office Shirt</h3>
+                <div class="star">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star-half checked"></span>
+                </div>
+                <h4>₹1,399</h4>
+            </div>
+            <a href="#"><i class="material-symbols-outlined cart">shopping_cart</i></a>
+        </div>
+    </div>
+</section>
+    <section id="banner" class="section-m1">
+        <h4>Repair Services</h4>
+        <h2>Up to <span>50% off</span>-All T-Shirts And Accessories</h2><br>
+        <button><a href="about.html">Explore More</button></a>
+    </section>
+
+    <section id="product1" class="section-p1">
+    <h2>New Arrivals</h2>
+    <p>Fresh Summer Collection with Trendy Modern Styles</p>
+
+    <div class="container">
+        <div class="pro">
+            <img src="a1.jpg" alt="Oversized T-Shirt">
+            <div class="des">
+                <span>H&M</span>
+                <h3>Men's Oversized Printed T-Shirt</h3>
+                <div class="star">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star-half checked"></span>
+                </div>
+                <h4>₹899</h4>
+            </div>
+            <a href="#"><i class="material-symbols-outlined cart">shopping_cart</i></a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="pro">
+            <img src="a2.jpg" alt="Casual Shirt">
+            <div class="des">
+                <span>Zara</span>
+                <h3>Men's Relaxed Fit Casual Shirt</h3>
+                <div class="star">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star-half checked"></span>
+                </div>
+                <h4>₹1,499</h4>
+            </div>
+            <a href="#"><i class="material-symbols-outlined cart">shopping_cart</i></a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="pro">
+            <img src="a3.jpg" alt="Summer Top">
+            <div class="des">
+                <span>ONLY</span>
+                <h3>Women's Summer Floral Top</h3>
+                <div class="star">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star-half checked"></span>
+                </div>
+                <h4>₹999</h4>
+            </div>
+            <a href="#"><i class="material-symbols-outlined cart">shopping_cart</i></a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="pro">
+            <img src="a4.jpg" alt="Denim Jacket">
+            <div class="des">
+                <span>Levi's</span>
+                <h3>Women's Classic Denim Jacket</h3>
+                <div class="star">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star-half checked"></span>
+                </div>
+                <h4>₹2,199</h4>
+            </div>
+            <a href="#"><i class="material-symbols-outlined cart">shopping_cart</i></a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="pro">
+            <img src="a5.jpg" alt="Polo T-Shirt">
+            <div class="des">
+                <span>U.S. Polo Assn.</span>
+                <h3>Men's Premium Polo Neck T-Shirt</h3>
+                <div class="star">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star-half checked"></span>
+                </div>
+                <h4>₹1,299</h4>
+            </div>
+            <a href="#"><i class="material-symbols-outlined cart">shopping_cart</i></a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="pro">
+            <img src="a6.jpg" alt="Casual Hoodie">
+            <div class="des">
+                <span>HRX</span>
+                <h3>Men's Lightweight Casual Hoodie</h3>
+                <div class="star">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star-half checked"></span>
+                </div>
+                <h4>₹1,599</h4>
+            </div>
+            <a href="#"><i class="material-symbols-outlined cart">shopping_cart</i></a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="pro">
+            <img src="a7.jpg" alt="Wide Leg Jeans">
+            <div class="des">
+                <span>Forever 21</span>
+                <h3>Women's Wide Leg Blue Jeans</h3>
+                <div class="star">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star-half checked"></span>
+                </div>
+                <h4>₹1,799</h4>
+            </div>
+            <a href="#"><i class="material-symbols-outlined cart">shopping_cart</i></a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="pro">
+            <img src="a8.jpg" alt="Formal Blazer">
+            <div class="des">
+                <span>Van Heusen</span>
+                <h3>Women's Elegant Office Blazer</h3>
+                <div class="star">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star-half checked"></span>
+                </div>
+                <h4>₹2,499</h4>
+            </div>
+            <a href="#"><i class="material-symbols-outlined cart">shopping_cart</i></a>
+        </div>
+    </div>
+</section>
+
+    <section id="sm-banner" class="section-p1">
+        <div class="banner-box">
+            <h4>Crazy Deal</h4>
+            <h2>Buy 1 Get 1 Free</h2>
+            <span>The Best Classic Dress Is On Flim</span>
+            <button>Learn More</button>
+        </div>
+        <div class="banner-box banner-box2">
+            <h4>Summer Week</h4>
+            <h2>Upcomming Season</h2>
+            <span>The Best Classic Dress Is On Flim</span>
+            <button>Collection</button>
+        </div>
+    </section>
+
+    <section id="banner3">
+        <div class="banner-box">
+            <h2>Sessonal Sale</h2>
+            <span>Winter Collection- 50% OFF</span>
+        </div>
+        <div class="banner-box banner-box2">
+            <h2>New Wear Collection</h2>
+            <span>Spring / Summer 2024</span>
+        </div>
+        <div class="banner-box banner-box3">
+            <h2>T-Shirt</h2>
+            <span>New Trend Prints</span>
+        </div>
+    </section><br><br>
+
+    <section id="newsletter">
+        <div class="newstext">
+            <h4>Sign Up For New Collection</h4>
+            <p>Get E-Mail Updates About Our Latest Shop And <span>Special Offers.</span></p>
+        </div>
+
+        <div class="form">
+            <input type="email" id="newsletterEmail" placeholder="Enter your e-mail" required>
+            <button class="normal" onclick="subscribe()">Sign Up</button>
+        </div>
+    </section>
+
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="shop.png" alt="">
+            <h4>Contact</h4>
+            <p><strong>Address:</strong> 277 Washington DC, Street 32, San Francisco</p>
+            <p><strong>Phone:</strong> +01 2222 365/ (+91) 70 6290 0010</p>
+            <p><strong>Hours:</strong> 10:00 - 10:00, Mon - Sat</p><br>
+
+            <div class="follow">
+                <h4>Follow Us</h4>
+                <div class="icons">
+                    <div class="icon facebook">
+                        <div class="tooltip">Facebook</div>
+                        <i class="fa fa-facebook"></i>
+                    </div>
+                    <div class="icon twitter">
+                        <div class="tooltip">Twitter</div>
+                        <i class="fa fa-twitter"></i>
+                    </div>
+                    <div class="icon instagram">
+                        <div class="tooltip">Instagram</div>
+                        <i class="fa fa-instagram"></i>
+                    </div>
+                    <div class="icon pinterest">
+                        <div class="tooltip">Pinterest</div>
+                        <i class="fa fa-pinterest"></i>
+                    </div>
+                    <div class="icon youtube">
+                        <div class="tooltip">YouTube</div>
+                        <i class="fa fa-youtube"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <h4>About</h4>
+            <a href="about.html">About Us</a>
+            <a href="terms_and_condition.html">Privacy Policy</a>
+            <a href="terms_and_condition.html">Terms & Condition</a>
+        </div>
+
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="signup.html">Sign In</a>
+            <a href="cart.html">View Cart</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+
+        <div class="col-install">
+            <h4>Install App</h4>
+            <p>From App Store or Google Pay</p><br>
+            <div class="row">
+                <img src="app.jpg" alt="">
+                <img src="play.jpg" alt=""><br>
+            </div>
+            <div class="payment">
+                <img class="pay" src="https://cdn-icons-png.flaticon.com/512/196/196578.png" alt="Visa">
+                <img class="pay" src="https://cdn-icons-png.flaticon.com/512/196/196561.png" alt="Mastercard">
+                <img class="pay" src="https://cdn-icons-png.flaticon.com/512/174/174861.png" alt="PayPal">
+                <img class="pay" src="https://cdn-icons-png.flaticon.com/512/6124/6124998.png" alt="Google Pay">
+                <div class="copyright">
+                    <p>© 2024, Tech etc- HTML CSS & JAVASCRIPT Ecommerce Template</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

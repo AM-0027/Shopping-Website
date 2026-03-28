@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Payment</title>
+  <link rel="stylesheet" href="payment.css" />
+</head>
+<body>
+
+<section class="payment-page">
+  <div class="payment-box">
+    <h1>Checkout & Payment</h1>
+
+    <!-- ORDER SUMMARY -->
+    <div class="order-summary">
+      <h2>Your Order</h2>
+      <div id="cartItems"></div>
+      <p class="total-line"><strong>Cart Total:</strong> ₹<span id="cartTotal">0</span></p>
+    </div>
+
+    <!-- MEMBERSHIP SUMMARY -->
+    <div class="plan-summary">
+      <h2>Selected Membership</h2>
+      <p><strong>Plan:</strong> <span id="planName">None</span></p>
+      <p><strong>Price:</strong> ₹<span id="planPrice">0</span></p>
+      <p><strong>Duration:</strong> <span id="planDuration">-</span></p>
+      <p><strong>Benefits:</strong> <span id="planBenefits">-</span></p>
+    </div>
+
+    <!-- FINAL TOTAL -->
+    <div class="final-summary">
+      <h2>Final Payment</h2>
+      <p><strong>Total Payable:</strong> ₹<span id="finalTotal">0</span></p>
+    </div>
+
+    <!-- PAYMENT METHODS -->
+    <div class="payment-methods">
+      <h2>Select Payment Method</h2>
+      <label><input type="radio" name="paymentMethod" value="UPI" checked> UPI</label>
+      <label><input type="radio" name="paymentMethod" value="Card"> Debit / Credit Card</label>
+      <label><input type="radio" name="paymentMethod" value="Cash on Delivery"> Cash on Delivery</label>
+    </div>
+
+    <button id="payBtn" onclick="payMembership()">Pay Now</button>
+  </div>
+</section>
+
+<div id="toast" class="toast"></div>
+
+<script src="payment.js"></script>
+</body>
+</html>
