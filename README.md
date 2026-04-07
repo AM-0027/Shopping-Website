@@ -1,6 +1,6 @@
-<<<<<<< HEAD
+
 # Project
-6th Semester Project
+4th Semester Project
 =======
 # Shopping-Website
->>>>>>> 3da478e2ba1666dc0180e0b8889d5172a3cb0ad6
+http://localhost:5000/login.html
